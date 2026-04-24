@@ -53,3 +53,74 @@ BloggingSite/
 │
 ├── log4net.config
 └── BloggingSite.csproj
+```
+
+## Architecture
+
+This project follows the MVC (Model-View-Controller) design pattern:
+
+- **Model**: Represents blog post data and database context.
+- **View**: Razor pages used to render the UI.
+- **Controller**: Handles user requests and business logic.
+
+Example:
+
+The `BlogPostsController` provides CRUD operations for managing blog posts asynchronously using Entity Framework.
+
+## Example Workflow
+- User navigates to `/BlogPosts/Create`
+- User fills in blog title and content
+- Form submits to the `Create` POST action
+- Data is validated and saved to the database
+- User is redirected to the blog post list
+
+## Getting Started
+### Prerequisites
+- .NET Core SDK 2.1
+- Visual Studio / Visual Studio Code
+- SQL Server or LocalDB (depending on configuration)
+
+## Installation
+
+Clone the repository:
+
+```
+git clone https://github.com/CatFortman/AspNetCoreBlogPlatform.git
+```
+
+Navigate to the project directory:
+
+```
+cd your-repo-name
+```
+
+Restore dependencies:
+
+```
+dotnet restore
+```
+
+Apply migrations / update database:
+
+```
+dotnet ef database update
+```
+
+Run the application:
+
+```
+dotnet run
+```
+
+## Logging
+
+This application uses Log4Net for logging and diagnostics.
+
+Configuration is located in:
+
+log4net.config
+
+## Future Improvements
+ - User authentication and authorization
+ - Rich text editor for blog posts
+ - Upgarde . NET
